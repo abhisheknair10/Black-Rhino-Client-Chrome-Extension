@@ -8,7 +8,30 @@ user.innerHTML = "user" + num.toString();
 
 /*-----------------------------------------------------------------------------*/
 
+//http://164.90.167.140:3000/chrome-click/chrome-click.html
 
+var HttpClient = function() {
+    this.get = function(aUrl, aCallback) {
+        var anHttpRequest = new XMLHttpRequest();
+        anHttpRequest.onreadystatechange = function() { 
+            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                aCallback(anHttpRequest.responseText);
+        }
+
+        anHttpRequest.open( "GET", aUrl, true );            
+        anHttpRequest.send( null );
+    }
+}
+
+var client = new HttpClient();
+client.get('http://164.90.167.140:3000/main', function(response) {
+    console.log(response);
+    nano_wallet_amount = document.getElementById("nano-wallet-amount");
+    nano_wallet_amount.innerHTML = response[0];
+
+    usd_wallet_amount = document.getElementById("usd-wallet-amount");
+    usd_wallet_amount.innerHTML = response[1];
+});
 
 /*-----------------------------------------------------------------------------*/
 
