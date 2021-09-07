@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+*{
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header-box {
+    height: 60px;
+    width: -1px;
+    background-color: rgb(242, 243, 244);
+}
+
+/*-----------------------------------------------------------------------------*/
+/* Header Box Elements */
+
+#black-rhino-icon {
+    position: relative;
+    top: 15px;
+    left: 17.5px;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    background-color: rgb(242, 243, 244);
+}
+
+#cross {
+    position: relative;
+    float: right;
+    top: 25px;
+    right: 17.5px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    background-color: rgb(242, 243, 244);
+    opacity: 70%;
+}
+
+#cross:hover {
+    opacity: 100%;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+#back-to-main {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    height: 25px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+}

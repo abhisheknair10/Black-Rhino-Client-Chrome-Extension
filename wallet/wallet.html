@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+          html, body {
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            height: 600px;
+            padding: 0;
+            width: 360px;
+            background-color: rgb(255, 255, 255);
+            overflow-y: auto;
+            overflow-x: hidden;
+          }
+      </style>
+      <link rel="stylesheet" href="wallet.css">
+  </head>
+  <body>
+      <div class = "header-box">
+        <div id = "rhino-back"></div>
+        <img id = "black-rhino-icon" src="/imgs/black-rhino-icon.png" alt="black-rhino-icon">
+        <img id = "cross" src="/imgs/cross.png" alt="cross">
+      </div>
+      <div>
+          <img id = "back-to-main" src="/imgs/back-to-main.png" alt="back-to-main">
+      </div>
+      <div>
+          <div id = "enter-wallet">Wallet Address</div>
+          <input type = "text" id = "wallet-address">
+          <div id = "enter-amount">Enter Amount in Nano</div>
+          <input type = "number" id = "transfer-amount">
+          <div id = "super-max">MAX</div>
+      </div>
+      <div>
+          <div id = "confirm-withdraw">Withdraw to Wallet</div>
+      </div>
+        <script src = "wallet.js"></script>
+  </body>
+</html>

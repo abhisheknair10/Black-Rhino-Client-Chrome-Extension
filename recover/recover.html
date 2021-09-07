@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+          html, body {
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            height: 600px;
+            padding: 0;
+            width: 360px;
+            background-color: rgb(255, 255, 255);
+            overflow-y: auto;
+            overflow-x: hidden;
+          }
+      </style>
+      <link rel="stylesheet" href="/recover/recover.css">
+  </head>
+  <body>
+      <div>
+        <div id = "black-rhino">Black Rhino</div>
+      </div>
+      <div class = "header-box">
+        <img id = "black-icon" src="/imgs/black-rhino-icon.png" alt="black-icon">
+        <img id = "cross" src="/imgs/cross-white.png" alt="cross">
+      </div>
+      <div>
+        <div id = "username">Username</div>
+        <input type = "text" id = "username-box">
+        <div id = "recovery-hash">Secret Recovery Hash</div>
+        <input type = "text" id = "hash">
+      </div>
+      <div id = "confirm-recovery">Recover Account</div>
+      <script src = "/recover/recover.js"></script>
+  </body>
+</html>

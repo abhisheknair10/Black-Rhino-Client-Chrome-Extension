@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+body{
+    position: relative;
+    background: rgb(30, 30, 30);
+    color: #fff;
+    font-family: 'Fira Mono', monospace;
+}
+
+#black-rhino{
+    position: relative;
+    animation: glitch 1s linear infinite;
+    font-size: 4.8em;
+    letter-spacing: -7px;
+    top: 95px;
+    left: 15px;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+#black-rhino:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+#black-rhino:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.header-box {
+    height: 60px;
+    width: -1px;
+    background-color: rgba(240, 240, 240, 0);
+    border-bottom: 1px solid rgba(200, 200, 200, 0);
+}
+
+#cross {
+    position: absolute;
+    float: right;
+    top: 25px;
+    right: 17.5px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    background-color: rgba(240, 240, 240, 0);
+    opacity: 70%;
+}
+
+#cross:hover {
+    opacity: 100%;
+}
+
+#black-icon {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: rgba(240, 240, 240, 0);
+}
+
+#username {
+    position: relative;
+    top: 80px;
+    left: 15px;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+#username-box {
+    position: relative;
+    top: 90px;
+    left: 10px;
+    width: 330px;
+    height: 30px;
+    border-radius: 5px;
+    letter-spacing: 0.75px;
+    text-indent: 5px;
+}
+
+#recovery-hash{
+    position: relative;
+    top: 120px;
+    left: 15px;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+#hash {
+    position: relative;
+    top: 130px;
+    left: 10px;
+    width: 330px;
+    height: 30px;
+    border-radius: 5px;
+    letter-spacing: 0.75px;
+    text-indent: 5px;
+}
+
+#confirm-recovery {
+    position: relative;
+    text-align: center;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    padding: 20px 10px;
+    background-color: rgb(255, 0, 68);
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    font-weight: 900;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+
+}
+
+#confirm-recovery:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    top: 195px;
+    left: 50%;
+    transform: translate(-55%, -55%);
+    box-shadow: 5px 5px rgb(255, 255, 255);
+    text-decoration: underline;
+}

@@ -1,0 +1,13 @@
+{
+    "name": "BlackRhino",
+    "description": "Browse the Internet and Earn Nano",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "icons": {"128": "/imgs/black-rhino-icon.png"},
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "chrome-click/chrome-click.html"
+    }
+}

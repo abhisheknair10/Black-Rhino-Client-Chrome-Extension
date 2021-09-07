@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+*{
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header-box {
+    height: 60px;
+    width: -1px;
+    background-color: rgb(242, 243, 244);
+}
+
+/*-----------------------------------------------------------------------------*/
+/* Header Box Elements */
+
+#black-rhino-icon {
+    position: relative;
+    top: 15px;
+    left: 17.5px;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    background-color: rgb(242, 243, 244);
+}
+
+#cross {
+    position: relative;
+    float: right;
+    top: 25px;
+    right: 17.5px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    background-color: rgb(242, 243, 244);
+    opacity: 70%;
+}
+
+#cross:hover {
+    opacity: 100%;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+#back-to-main {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    height: 25px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+}
+
+#enter-wallet {
+    position: relative;
+    top: 80px;
+    left: 15px;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+#wallet-address {
+    position: relative;
+    top: 90px;
+    left: 10px;
+    width: 330px;
+    height: 30px;
+    border-radius: 5px;
+    letter-spacing: 0.75px;
+    text-indent: 5px;
+}
+
+#enter-amount{
+    position: relative;
+    top: 120px;
+    left: 15px;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+#transfer-amount {
+    position: relative;
+    top: 130px;
+    left: 10px;
+    width: 330px;
+    height: 30px;
+    border-radius: 5px;
+    letter-spacing: 0.75px;
+    text-indent: 5px;
+}
+
+#super-max {
+    position: relative;
+    left: 288px;
+    top: 100px;
+    width: 35px;
+    padding: 2px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    letter-spacing: 0.75px;
+    opacity: 100%;
+    cursor: pointer;
+}
+
+#confirm-withdraw {
+    position: relative;
+    text-align: center;
+    top: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    padding: 20px 10px;
+    background-color: rgb(255, 0, 68);
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+    font-weight: 900;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+
+}
+
+#confirm-withdraw:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    top: 185px;
+    left: 50%;
+    transform: translate(-55%, -55%);
+    box-shadow: 5px 5px rgb(0, 0, 0);
+    text-decoration: underline;
+}

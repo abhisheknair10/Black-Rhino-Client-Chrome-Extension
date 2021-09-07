@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+body{
+    position: relative;
+    background: rgb(30, 30, 30);
+    color: #fff;
+    font-family: 'Fira Mono', monospace;
+}
+
+#black-rhino{
+    position: relative;
+    animation: glitch 1s linear infinite;
+    font-size: 4.8em;
+    letter-spacing: -7px;
+    top: 95px;
+    left: 15px;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+#black-rhino:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+#black-rhino:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.header-box {
+    height: 60px;
+    width: -1px;
+    background-color: rgba(240, 240, 240, 0);
+    border-bottom: 1px solid rgba(200, 200, 200, 0);
+}
+
+#cross {
+    position: absolute;
+    float: right;
+    top: 25px;
+    right: 17.5px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    background-color: rgba(240, 240, 240, 0);
+    opacity: 70%;
+}
+
+#cross:hover {
+    opacity: 100%;
+}
+
+#black-icon {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: rgba(240, 240, 240, 0);
+}
+
+#proceed {
+    position: relative;
+    top: 200px;
+    padding: 10px 10px;
+    width: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 247, 0, 1);
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+}
+
+#proceed:hover {
+    top: 195px;
+    left: 50%;
+    transform: translate(-55%, -55%);
+    cursor: pointer;
+    text-decoration: underline;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(255, 255, 255);
+}
+
+#recover {
+  position: relative;
+  top: 250px;
+  padding: 10px 10px;
+  width: 190px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(255, 0, 68, 1);
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+
+#recover:hover {
+  top: 245px;
+  left: 50%;
+  transform: translate(-55%, -55%);
+  cursor: pointer;
+  text-decoration: underline;
+  border-radius: 10px;
+  box-shadow: 5px 5px rgb(255, 255, 255);
+}
