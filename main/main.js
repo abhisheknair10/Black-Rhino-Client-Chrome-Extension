@@ -33,7 +33,3 @@ document.getElementById("username").onclick = function () {
     document.execCommand('copy');
     document.body.removeChild(el);
 }
-
-document.getElementById("username").onclick = function () {
-
-}
