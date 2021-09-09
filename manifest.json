@@ -5,9 +5,13 @@
     "manifest_version": 3,
     "icons": {"128": "/imgs/black-rhino-icon.png"},
     "permissions": [
-        "storage"
+        "storage",
+        "webRequest"
+    ],
+    "host_permissions": [
+        "http://139.59.143.3:3000/*"
     ],
     "action": {
-        "default_popup": "chrome-click/chrome-click.html"
+        "default_popup": "popup/popup.html"
     }
 }

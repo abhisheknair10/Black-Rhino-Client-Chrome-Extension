@@ -123,24 +123,32 @@ body{
 }
 
 #recover {
-  position: relative;
-  top: 250px;
-  padding: 10px 10px;
-  width: 190px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: rgba(255, 0, 68, 1);
-  border-radius: 10px;
-  color: rgb(255, 255, 255);
+    position: relative;
+    top: 250px;
+    padding: 10px 10px;
+    width: 190px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 0, 68, 1);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
 }
 
 #recover:hover {
-  top: 245px;
-  left: 50%;
-  transform: translate(-55%, -55%);
-  cursor: pointer;
-  text-decoration: underline;
-  border-radius: 10px;
-  box-shadow: 5px 5px rgb(255, 255, 255);
+    top: 245px;
+    left: 50%;
+    transform: translate(-55%, -55%);
+    cursor: pointer;
+    text-decoration: underline;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(255, 255, 255);
+}
+
+#please-wait {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    top: 460px;
 }

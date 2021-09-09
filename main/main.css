@@ -49,7 +49,7 @@
     position: relative;
     top: 50px;
     padding: 10px 10px;
-    width: 150px;
+    width: 190px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -59,7 +59,6 @@
 
 #username:hover {
     top: 45px;
-    left: 50%;
     transform: translate(-55%, -55%);
     cursor: pointer;
     text-decoration: underline;
@@ -70,8 +69,9 @@
 #nano-wallet-amount {
     position: relative;
     text-align: center;
-    top: 60px;
-    right: 43px;
+    top: 70px;
+    left: 50%;
+    transform: translate(-62%, -50%);
     font-size: 2.4em;
     font-weight: 600;
     letter-spacing: 0.1px;
@@ -81,8 +81,9 @@
 #nano-wallet-unit {
     position: relative;
     text-align: center;
-    top: 11px;
-    left: 43px;
+    top: 19px;
+    left: 50%;
+    transform: translate(-38%, -50%);
     font-size: 2.3em;
     font-weight: 600;
     letter-spacing: 0.1px;
@@ -94,8 +95,8 @@
     text-align: center;
     color: rgb(132, 140, 150);
     font-weight: 500;
-    top: 15px;
-    right: 19px;
+    bottom: 5px;
+    right: 20px;
     font-size: 1.3em;
     letter-spacing: 0.1px;
     background-color: rgba(255, 255, 255, 0);
@@ -106,8 +107,8 @@
     text-align: center;
     color: rgb(132, 140, 150);
     font-weight: 500;
-    bottom: 11px;
-    left: 19px;
+    bottom: 31px;
+    left: 20px;
     font-size: 1.2em;
     letter-spacing: 0.1px;
     background-color: rgba(255, 255, 255, 0);
