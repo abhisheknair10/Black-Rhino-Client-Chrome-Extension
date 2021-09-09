@@ -147,8 +147,10 @@ body{
 
 #please-wait {
     position: absolute;
+    text-align: center;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 300px;
     color: rgb(255, 255, 255);
     top: 460px;
 }
