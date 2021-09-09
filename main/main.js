@@ -26,12 +26,8 @@ var HttpClient = function() {
 var client = new HttpClient();
 client.get('http://139.59.143.3:3000/main/' + userName + "/" + secretHash, function(response) {
     const data = response.split("<>");
-
     nano_wallet_amount = document.getElementById("nano-wallet-amount");
     nano_wallet_amount.innerHTML = data[0];
-
-    usd_wallet_amount = document.getElementById("usd-wallet-amount");
-    usd_wallet_amount.innerHTML = data[1];
 });
 
 /*-----------------------------------------------------------------------------*/
@@ -67,3 +63,11 @@ document.getElementById("secret").onclick = function () {
     document.execCommand('copy');
     document.body.removeChild(el);
 }
+
+document.getElementById("logout").onclick = function () {
+    localStorage.removeItem("username");
+    localStorage.removeItem("hash");
+    setTimeout(function(){
+        location.href = "/chrome-click/chrome-click.html";
+    }, 500);
+};
