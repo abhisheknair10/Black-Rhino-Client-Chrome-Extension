@@ -17,7 +17,6 @@ var HttpClient = function() {
             if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
                 aCallback(anHttpRequest.responseText);
         }
-
         anHttpRequest.open( "GET", aUrl, true );            
         anHttpRequest.send( null );
     }
@@ -25,9 +24,8 @@ var HttpClient = function() {
 
 var client = new HttpClient();
 client.get('http://139.59.143.3:3000/main/' + userName + "/" + secretHash, function(response) {
-    const data = response.split("<>");
     nano_wallet_amount = document.getElementById("nano-wallet-amount");
-    nano_wallet_amount.innerHTML = data[0];
+    nano_wallet_amount.innerHTML = response;
 });
 
 /*-----------------------------------------------------------------------------*/
