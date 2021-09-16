@@ -9,7 +9,7 @@
         "webRequest"
     ],
     "host_permissions": [
-        "http://139.59.143.3:3000/*"
+        "http://207.154.251.141:3000/*"
     ],
     "action": {
         "default_popup": "popup/popup.html"

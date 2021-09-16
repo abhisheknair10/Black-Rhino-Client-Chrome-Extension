@@ -30,7 +30,7 @@ document.getElementById('proceed').onclick = function() {
         document.getElementById("please-wait").innerHTML = "Generating Account...";
         document.getElementById("please-wait").style.display = 'block';
         var client = new HttpClient();
-        client.get('http://139.59.143.3:3000/newuser/generateuser-request', function(response) {
+        client.get('http://207.154.251.141:3000/newuser/generateuser-request', function(response) {
             var data = response.split("<>");
 
             localStorage["username"] = data[0];

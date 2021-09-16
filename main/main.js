@@ -23,7 +23,7 @@ var HttpClient = function() {
 }
 
 var client = new HttpClient();
-client.get('http://139.59.143.3:3000/main/' + userName + "/" + secretHash, function(response) {
+client.get('http://207.154.251.141:3000/main/' + userName + "/" + secretHash, function(response) {
     nano_wallet_amount = document.getElementById("nano-wallet-amount");
     nano_wallet_amount.innerHTML = response;
 });
