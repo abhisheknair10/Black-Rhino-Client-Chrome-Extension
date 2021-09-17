@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------*/
 
-//http://139.59.143.3:3000/chrome-click/chrome-click.html
+//http://207.154.251.141:3000/chrome-click/chrome-click.html
 
 document.getElementById("please-wait").style.display = 'none';
 var onlineStatus = window.navigator.onLine ? 'on' : 'off';
@@ -31,13 +31,19 @@ document.getElementById('proceed').onclick = function() {
         document.getElementById("please-wait").style.display = 'block';
         var client = new HttpClient();
         client.get('http://207.154.251.141:3000/newuser/generateuser-request', function(response) {
-            var data = response.split("<>");
+            if(response != "userfound"){
+                var data = response.split("<>");
 
-            localStorage["username"] = data[0];
-            localStorage["hash"] = data[1];
-            setTimeout(function(){
-                location.href = "/main/main.html";
-            }, 2000);
+                localStorage["username"] = data[0];
+                localStorage["hash"] = data[1];
+                setTimeout(function(){
+                    location.href = "/main/main.html";
+                }, 500);
+            }
+            else{
+                document.getElementById("please-wait").style.display = 'none';
+                alert("There was a problem while generating an account. Please try again")
+            }
         });
     }
     else{
