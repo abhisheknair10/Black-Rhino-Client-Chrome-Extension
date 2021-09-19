@@ -16,9 +16,9 @@ var HttpClient = function() {
     }
 }
 
-var nano_amount = new HttpClient();
-nano_amount.get('http://207.154.251.141:3000/main/' + userName + "/" + secretHash, function(response) {
-    localStorage["nanoamount"] = response;
+var xlm_amount = new HttpClient();
+xlm_amount.get('http://207.154.251.141:3000/main/' + userName + "/" + secretHash, function(response) {
+    localStorage["xlmamount"] = response;
 });
 
 
@@ -31,7 +31,7 @@ document.getElementById('back-to-main').onclick = function() {
 }
 
 document.getElementById('super-max').onclick = function() {
-    document.getElementById("transfer-amount").value = localStorage["nanoamount"];
+    document.getElementById("transfer-amount").value = localStorage["xlmamount"];
 }
 
 document.getElementById('confirm-withdraw').onclick = function() {
