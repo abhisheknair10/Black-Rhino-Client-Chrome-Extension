@@ -23,10 +23,12 @@ xlm_amount.get('http://207.154.251.141:3000/main/' + userName + "/" + secretHash
 
 
 document.getElementById('cross').onclick = function() {
+    localStorage.removeItem("xlmamount");
     window.close()
 }
 
 document.getElementById('back-to-main').onclick = function() {
+    localStorage.removeItem("xlmamount");
     location.href = "/main/main.html";
 }
 
