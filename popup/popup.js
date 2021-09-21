@@ -1,10 +1,40 @@
 var username = localStorage["username"];
 var hash = localStorage["hash"];
 
+var HttpClient = function() {
+    this.get = function(aUrl, aCallback) {
+        var anHttpRequest = new XMLHttpRequest();
+        anHttpRequest.onreadystatechange = function() { 
+            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                aCallback(anHttpRequest.responseText);
+        }
+        anHttpRequest.open( "GET", aUrl, true );            
+        anHttpRequest.send( null );
+    }
+}
+
+var client = new HttpClient();
+
 if(username == undefined && hash == undefined){
     location.href = "/chrome-click/chrome-click.html";
 }
 else{
-    //check whether website visited is advertised on Black Rhino
-    location.href = "/main/main.html";
+    chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
+        try{
+            theurl = tabs[0].url;
+            console.log(theurl)
+            theurl = theurl.split("https://")[1];
+            console.log(theurl)
+            theurl = theurl.split('/');
+            console.log(theurl)
+            theurl = theurl.join('-');
+            console.log(theurl)
+            client.get('http://207.154.251.141:3000/checkurl/' + username + '/' + theurl, function(response) {
+                location.href = "/main/main.html";
+            });
+        }
+        catch(err){
+            location.href = "/main/main.html";
+        }
+    });
 }

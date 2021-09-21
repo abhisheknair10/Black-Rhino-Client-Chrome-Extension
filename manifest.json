@@ -6,7 +6,8 @@
     "icons": {"128": "/imgs/black-rhino-icon.png"},
     "permissions": [
         "storage",
-        "webRequest"
+        "webRequest",
+        "tabs"
     ],
     "host_permissions": [
         "http://207.154.251.141:3000/*"
