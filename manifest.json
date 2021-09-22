@@ -10,7 +10,7 @@
         "tabs"
     ],
     "host_permissions": [
-        "http://207.154.251.141:3000/*"
+        "http://blackrhino-ce.com/*"
     ],
     "action": {
         "default_popup": "popup/popup.html"

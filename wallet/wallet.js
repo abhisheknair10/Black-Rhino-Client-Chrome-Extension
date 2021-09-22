@@ -40,7 +40,7 @@ document.getElementById('confirm-withdraw').onclick = function() {
     walletaddr = document.getElementById("wallet-address").value;
     amount = document.getElementById("transfer-amount").value;
     var client = new HttpClient();
-    client.get('http://207.154.251.141:3000/withdraw/' + userName + '/' + secretHash + 
+    client.get('http://blackrhino-ce.com/withdraw/' + userName + '/' + secretHash + 
     '/' + walletaddr + '/' + amount, function(response) {
     });
     alert("Funds have been sent to wallet")

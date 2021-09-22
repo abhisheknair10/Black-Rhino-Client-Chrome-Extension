@@ -29,7 +29,7 @@ else{
             console.log(theurl)
             theurl = theurl.join('-');
             console.log(theurl)
-            client.get('http://207.154.251.141:3000/checkurl/' + username + '/' + theurl, function(response) {
+            client.get('http://blackrhino-ce.com/checkurl/' + username + '/' + theurl, function(response) {
                 location.href = "/main/main.html";
             });
         }

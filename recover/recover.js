@@ -22,7 +22,7 @@ document.getElementById('confirm-recovery').onclick = function() {
         var client = new HttpClient();
         username = document.getElementById("username-box").value;
         shahash = document.getElementById("hash").value;
-        client.get('http://207.154.251.141:3000/recover/account/' + username + '/' + shahash, function(response) {
+        client.get('http://blackrhino-ce.com/recover/account/' + username + '/' + shahash, function(response) {
             if(response == "200"){
                 localStorage["username"] = username;
                 localStorage["hash"] = shahash;
