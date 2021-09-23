@@ -73,39 +73,6 @@
     text-indent: 5px;
 }
 
-#enter-amount{
-    position: relative;
-    top: 120px;
-    left: 15px;
-    font-size: 1.2em;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-#transfer-amount {
-    position: relative;
-    top: 130px;
-    left: 10px;
-    width: 330px;
-    height: 30px;
-    border-radius: 5px;
-    letter-spacing: 0.75px;
-    text-indent: 5px;
-}
-
-#super-max {
-    position: relative;
-    left: 288px;
-    top: 100px;
-    width: 35px;
-    padding: 2px;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    letter-spacing: 0.75px;
-    opacity: 100%;
-    cursor: pointer;
-}
-
 #confirm-withdraw {
     position: relative;
     text-align: center;

@@ -16,32 +16,20 @@ var HttpClient = function() {
     }
 }
 
-var xlm_amount = new HttpClient();
-xlm_amount.get('http://207.154.251.141:3000/main/' + userName + "/" + secretHash, function(response) {
-    localStorage["xlmamount"] = response;
-});
-
 
 document.getElementById('cross').onclick = function() {
-    localStorage.removeItem("xlmamount");
     window.close()
 }
 
 document.getElementById('back-to-main').onclick = function() {
-    localStorage.removeItem("xlmamount");
     location.href = "/main/main.html";
-}
-
-document.getElementById('super-max').onclick = function() {
-    document.getElementById("transfer-amount").value = localStorage["xlmamount"];
 }
 
 document.getElementById('confirm-withdraw').onclick = function() {
     walletaddr = document.getElementById("wallet-address").value;
-    amount = document.getElementById("transfer-amount").value;
     var client = new HttpClient();
     client.get('http://blackrhino-ce.com/withdraw/' + userName + '/' + secretHash + 
-    '/' + walletaddr + '/' + amount, function(response) {
+    '/' + walletaddr, function(response) {
+        alert("Funds have been sent to wallet");
     });
-    alert("Funds have been sent to wallet")
 }

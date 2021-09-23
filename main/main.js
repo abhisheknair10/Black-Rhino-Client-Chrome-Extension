@@ -24,8 +24,8 @@ var HttpClient = function() {
 
 var client = new HttpClient();
 client.get('http://blackrhino-ce.com/main/' + userName + "/" + secretHash, function(response) {
-    xlm_wallet_amount = document.getElementById("xlm-wallet-amount");
-    xlm_wallet_amount.innerHTML = response;
+    btc_wallet_amount = document.getElementById("btc-wallet-amount");
+    btc_wallet_amount.innerHTML = response;
 });
 
 /*-----------------------------------------------------------------------------*/
@@ -62,10 +62,3 @@ document.getElementById("secret").onclick = function () {
     document.body.removeChild(el);
 }
 
-document.getElementById("logout").onclick = function () {
-    localStorage.removeItem("username");
-    localStorage.removeItem("hash");
-    setTimeout(function(){
-        location.href = "/chrome-click/chrome-click.html";
-    }, 500);
-};
