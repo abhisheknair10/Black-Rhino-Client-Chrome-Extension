@@ -5,6 +5,12 @@
 
 var userName = localStorage["username"];
 var secretHash = localStorage["hash"];
+var verified = localStorage["verified"];
+
+if(verified == 0){
+    alert(`Note: You will not be able to earn from Black Rhino CE until 
+    your account has been verified.\nPlease check your email inbox from Black Rhino CE to verify your account`)
+}
 
 username = document.getElementById("username");
 username.innerHTML = userName;
@@ -25,7 +31,12 @@ var HttpClient = function() {
 var client = new HttpClient();
 client.get('http://blackrhino-ce.com/main/' + userName + "/" + secretHash, function(response) {
     btc_wallet_amount = document.getElementById("btc-wallet-amount");
-    btc_wallet_amount.innerHTML = response;
+    if(response == 0){
+        btc_wallet_amount.innerHTML = "0.00";
+    }
+    else{
+        btc_wallet_amount.innerHTML = response;
+    }
 });
 
 /*-----------------------------------------------------------------------------*/
@@ -62,3 +73,11 @@ document.getElementById("secret").onclick = function () {
     document.body.removeChild(el);
 }
 
+document.getElementById("logout").onclick = function () {
+    localStorage.removeItem("username");
+    localStorage.removeItem("hash");
+    localStorage.removeItem("verified");
+    setTimeout(function(){
+        location.href = "/chrome-click/chrome-click.html";
+    }, 500);
+};

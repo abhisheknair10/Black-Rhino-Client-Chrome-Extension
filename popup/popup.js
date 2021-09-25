@@ -30,11 +30,15 @@ else{
             theurl = theurl.join('-');
             console.log(theurl)
             client.get('http://blackrhino-ce.com/checkurl/' + username + '/' + theurl, function(response) {
+                localStorage["verified"] = response;
                 location.href = "/main/main.html";
             });
         }
         catch(err){
-            location.href = "/main/main.html";
+            client.get('http://blackrhino-ce.com/checkurl/' + username + '/' + "theurl", function(response) {
+                localStorage["verified"] = response;
+                location.href = "/main/main.html";
+            });
         }
     });
 }

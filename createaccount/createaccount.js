@@ -34,18 +34,23 @@ document.getElementById('create-account').onclick = function() {
             var client = new HttpClient();
             client.get('http://blackrhino-ce.com/newuser/generateuser-request/' + email, function(response) {
                 document.getElementById("creating").style.display = 'block';
-                if(response != "userfound"){
+                if(response == "emailfound"){
+                    document.getElementById("creating").style.display = 'none';
+                    alert("The Email Address is already in use. Please try another Email Address to Sign Up")
+                }
+                else if(response == "userfound"){
+                    document.getElementById("creating").style.display = 'none';
+                    alert("There was a problem while generating an account. Please try again")
+                }
+                else{
                     var data = response.split("<>");
-
+                    
                     localStorage["username"] = data[0];
                     localStorage["hash"] = data[1];
+                    localStorage["verified"] = 0;
                     setTimeout(function(){
                         location.href = "/main/main.html";
                     }, 500);
-                }
-                else{
-                    document.getElementById("please-wait").style.display = 'none';
-                    alert("There was a problem while generating an account. Please try again")
                 }
             });
         }

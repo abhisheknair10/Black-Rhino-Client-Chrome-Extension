@@ -205,3 +205,25 @@
     width: 20px;
     height: 20px;
 }
+
+#logout {
+    position: relative;
+    top: 40px;
+    width: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+#logout:hover {
+    cursor: pointer;
+    top: 38px;
+    background-color: rgb(235, 235, 235);
+    transform: translate(-52%, -52%);
+    left: 50%;
+    box-shadow: 2px 2px rgb(0, 0, 0);
+}

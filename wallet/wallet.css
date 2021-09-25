@@ -73,10 +73,30 @@
     text-indent: 5px;
 }
 
+#enter-amount{
+    position: relative;
+    top: 120px;
+    left: 15px;
+    font-size: 1.2em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+#transfer-amount {
+    position: relative;
+    top: 130px;
+    left: 10px;
+    width: 330px;
+    height: 30px;
+    border-radius: 5px;
+    letter-spacing: 0.75px;
+    text-indent: 5px;
+}
+
 #confirm-withdraw {
     position: relative;
     text-align: center;
-    top: 190px;
+    top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 180px;
@@ -94,7 +114,7 @@
 #confirm-withdraw:hover {
     cursor: pointer;
     color: rgb(255, 255, 255);
-    top: 185px;
+    top: 195px;
     left: 50%;
     transform: translate(-55%, -55%);
     box-shadow: 5px 5px rgb(0, 0, 0);
