@@ -29,13 +29,13 @@ else{
             console.log(theurl)
             theurl = theurl.join('-');
             console.log(theurl)
-            client.get('http://blackrhino-ce.com/checkurl/' + username + '/' + theurl, function(response) {
+            client.get('https://blackrhino-ce.com/checkurl/' + username + '/' + theurl, function(response) {
                 localStorage["verified"] = response;
                 location.href = "/main/main.html";
             });
         }
         catch(err){
-            client.get('http://blackrhino-ce.com/checkurl/' + username + '/' + "theurl", function(response) {
+            client.get('https://blackrhino-ce.com/checkurl/' + username + '/' + "theurl", function(response) {
                 localStorage["verified"] = response;
                 location.href = "/main/main.html";
             });

@@ -37,7 +37,7 @@ var HttpClient = function() {
 
 var client = new HttpClient();
 var username = localStorage["username"];
-client.get('http://blackrhino-ce.com/hints/' + username, function(response) {
+client.get('https://blackrhino-ce.com/hints/' + username, function(response) {
     hints_arr = response.split("<>");
     console.log(hints_arr);
     for (let i = 0; i < hints_arr.length-1; i++) {

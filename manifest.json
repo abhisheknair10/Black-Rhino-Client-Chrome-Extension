@@ -10,7 +10,7 @@
         "tabs"
     ],
     "host_permissions": [
-        "http://blackrhino-ce.com/*"
+        "https://blackrhino-ce.com/*"
     ],
     "action": {
         "default_popup": "popup/popup.html"

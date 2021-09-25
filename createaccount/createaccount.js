@@ -32,7 +32,7 @@ document.getElementById('create-account').onclick = function() {
         var validated = validateEmail(email);
         if(validated){
             var client = new HttpClient();
-            client.get('http://blackrhino-ce.com/newuser/generateuser-request/' + email, function(response) {
+            client.get('https://blackrhino-ce.com/newuser/generateuser-request/' + email, function(response) {
                 document.getElementById("creating").style.display = 'block';
                 if(response == "emailfound"){
                     document.getElementById("creating").style.display = 'none';

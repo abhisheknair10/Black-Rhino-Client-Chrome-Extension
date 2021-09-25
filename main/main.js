@@ -29,7 +29,7 @@ var HttpClient = function() {
 }
 
 var client = new HttpClient();
-client.get('http://blackrhino-ce.com/main/' + userName + "/" + secretHash, function(response) {
+client.get('https://blackrhino-ce.com/main/' + userName + "/" + secretHash, function(response) {
     btc_wallet_amount = document.getElementById("btc-wallet-amount");
     if(response == 0){
         btc_wallet_amount.innerHTML = "0.00";
