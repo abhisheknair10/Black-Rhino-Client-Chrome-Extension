@@ -30,12 +30,12 @@ var HttpClient = function() {
 
 var client = new HttpClient();
 client.get('https://blackrhino-ce.com/main/' + userName + "/" + secretHash, function(response) {
-    btc_wallet_amount = document.getElementById("btc-wallet-amount");
+    zcash_wallet_amount = document.getElementById("zcash-wallet-amount");
     if(response == 0){
-        btc_wallet_amount.innerHTML = "0.00";
+        zcash_wallet_amount.innerHTML = "0.00";
     }
     else{
-        btc_wallet_amount.innerHTML = response;
+        zcash_wallet_amount.innerHTML = response;
     }
 });
 

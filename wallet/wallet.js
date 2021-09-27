@@ -31,6 +31,17 @@ document.getElementById('confirm-withdraw').onclick = function() {
     var client = new HttpClient();
     client.get('https://blackrhino-ce.com/withdraw/' + userName + '/' + secretHash + 
     '/' + walletaddr + '/' + transferamount, function(response) {
-        alert("Funds have been sent to wallet");
+        if(response == "non-existent"){
+            alert("Something went wrong while verifying your account")
+        }
+        else if(response == "wrong-hash"){
+            alert("Something went wrong while verifying your account")
+        }
+        else if(response == "too-much-amount"){
+            alert("You do not have the requested amount of Bitcoin in your Black Rhino Wallet")
+        }
+        else if(response == "sent-to-wallet"){
+            alert("Funds have been sent to wallet")
+        }
     });
 }
