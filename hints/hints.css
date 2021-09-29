@@ -3,13 +3,13 @@
 *{
     font-family: 'Titillium Web', sans-serif;
     letter-spacing: 2px;
-    background-color: rgb(255, 255, 255);
+    background: rgb(30, 30, 30);
 }
 
 .header-box {
     height: 60px;
     width: -1px;
-    background-color: rgb(242, 243, 244);
+    background-color: rgb(40, 40, 40);
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -22,7 +22,7 @@
     height: 35px;
     width: 35px;
     border-radius: 5px;
-    background-color: rgb(242, 243, 244);
+    background-color: rgb(242, 243, 244, 0);
 }
 
 #cross {
@@ -33,7 +33,7 @@
     height: 15px;
     width: 15px;
     cursor: pointer;
-    background-color: rgb(242, 243, 244);
+    background-color: rgb(242, 243, 244, 0);
     opacity: 70%;
 }
 
@@ -57,4 +57,5 @@
     position: relative;
     top: 100px;
     height: 40px;
+    background-color: rgb(255, 255, 255, 0)
 }

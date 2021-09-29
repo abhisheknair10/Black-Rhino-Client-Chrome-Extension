@@ -3,13 +3,13 @@
 *{
     font-family: 'Titillium Web', sans-serif;
     letter-spacing: 2px;
-    background-color: rgb(255, 255, 255);
+    background: rgb(30, 30, 30);
 }
 
 .header-box {
     height: 60px;
     width: -1px;
-    background-color: rgb(242, 243, 244);
+    background-color: rgb(40, 40, 40);
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -22,7 +22,7 @@
     height: 35px;
     width: 35px;
     border-radius: 5px;
-    background-color: rgb(242, 243, 244);
+    background-color: rgb(242, 243, 244, 0);
 }
 
 #cross {
@@ -33,7 +33,7 @@
     height: 15px;
     width: 15px;
     cursor: pointer;
-    background-color: rgb(242, 243, 244);
+    background-color: rgb(242, 243, 244, 0);
     opacity: 70%;
 }
 
@@ -60,6 +60,7 @@
     font-size: 1.2em;
     font-weight: 400;
     letter-spacing: 1px;
+    color: rgb(255, 255, 255);
 }
 
 #wallet-address {
@@ -71,6 +72,8 @@
     border-radius: 5px;
     letter-spacing: 0.75px;
     text-indent: 5px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(235, 235, 235);
 }
 
 #enter-amount{
@@ -80,6 +83,7 @@
     font-size: 1.2em;
     font-weight: 400;
     letter-spacing: 1px;
+    color: rgb(255, 255, 255);
 }
 
 #transfer-amount {
@@ -91,6 +95,8 @@
     border-radius: 5px;
     letter-spacing: 0.75px;
     text-indent: 5px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(235, 235, 235);
 }
 
 #confirm-withdraw {
@@ -117,6 +123,6 @@
     top: 195px;
     left: 50%;
     transform: translate(-55%, -55%);
-    box-shadow: 5px 5px rgb(0, 0, 0);
+    box-shadow: 5px 5px rgb(187,134,252);
     text-decoration: underline;
 }

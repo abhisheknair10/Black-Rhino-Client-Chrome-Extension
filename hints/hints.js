@@ -7,13 +7,14 @@ function createDivHints(hint, num) {
     div.style.transform = "translate(-50%, -50%)";
     div.style.width = "340px";
     div.style.height = "100px";
-    div.style.border = "1px solid rgba(235, 235, 235, 1)";
+    div.style.borderTop = "1px solid rgba(235, 235, 235, 0.2)";
+    div.style.borderBottom = "1px solid rgba(235, 235, 235, 0.2)";
     div.style.padding = "10px";
     div.style.backgroundClip = "content-box";
     div.style.paddingTop = "5px";
     div.style.paddingBottom = "5px";
-    div.style.background = "rgba(250, 250, 250, 1)";
-    div.style.color = "black";
+    div.style.background = "rgba(100, 100, 100, 0.1)";
+    div.style.color = "white";
     div.style.letterSpacing = "1px";
     div.style.textAlign = "justify";
     div.innerHTML = hint;
