@@ -12,6 +12,12 @@
     background-color: rgb(40, 40, 40);
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
 /*-----------------------------------------------------------------------------*/
 /* Header Box Elements */
 

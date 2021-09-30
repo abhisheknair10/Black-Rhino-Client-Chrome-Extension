@@ -1,6 +1,6 @@
 {
-    "name": "BlackRhino",
-    "description": "Browse the Internet and Earn Nano",
+    "name": "Black Rhino CE",
+    "description": "Browse the Internet and Earn Zcash",
     "version": "1.0.0",
     "manifest_version": 3,
     "icons": {"128": "/imgs/black-rhino-icon.png"},
