@@ -9,7 +9,7 @@ var verified = localStorage["verified"];
 
 if(verified == 0){
     alert(`Note: You will not be able to earn from Black Rhino CE until 
-    your account has been verified.\nPlease check your email inbox from Black Rhino CE to verify your account`)
+    your account has been verified.\nPlease check your email inbox from verify@blackrhino-ce.com to verify your account`)
 }
 
 username = document.getElementById("username");

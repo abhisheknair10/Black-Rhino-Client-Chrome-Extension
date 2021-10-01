@@ -26,37 +26,43 @@ document.getElementById('cross').onclick = function() {
 
 document.getElementById('create-account').onclick = function() {
     if((window.navigator.onLine ? 'on' : 'off') == "on"){
-        document.getElementById("creating").style.display = 'none';
-        document.getElementById("creating").innerHTML = "Creating...";
-        var email = document.getElementById("email-box").value;
-        var validated = validateEmail(email);
-        if(validated){
-            var client = new HttpClient();
-            client.get('https://blackrhino-ce.com/newuser/generateuser-request/' + email, function(response) {
+        var country = document.getElementById("country").value;
+        if(country != "Choose Country"){
+            document.getElementById("creating").style.display = 'none';
+            document.getElementById("creating").innerHTML = "Creating...";
+            var email = document.getElementById("email-box").value;
+            var validated = validateEmail(email);
+            if(validated){
+                var client = new HttpClient();
+                client.get('https://blackrhino-ce.com/newuser/generateuser-request/' + email + "/" + country, function(response) {
+                    document.getElementById("creating").style.display = 'block';
+                    if(response == "emailfound"){
+                        document.getElementById("creating").style.display = 'none';
+                        alert("The Email Address is already in use. Please try another Email Address to Sign Up")
+                    }
+                    else if(response == "userfound"){
+                        document.getElementById("creating").style.display = 'none';
+                        alert("There was a problem while generating an account. Please try again")
+                    }
+                    else{
+                        var data = response.split("<>");
+                        
+                        localStorage["username"] = data[0];
+                        localStorage["hash"] = data[1];
+                        localStorage["verified"] = 0;
+                        setTimeout(function(){
+                            location.href = "/main/main.html";
+                        }, 500);
+                    }
+                });
+            }
+            else{
+                document.getElementById("creating").innerHTML = "Invalid Email Address";
                 document.getElementById("creating").style.display = 'block';
-                if(response == "emailfound"){
-                    document.getElementById("creating").style.display = 'none';
-                    alert("The Email Address is already in use. Please try another Email Address to Sign Up")
-                }
-                else if(response == "userfound"){
-                    document.getElementById("creating").style.display = 'none';
-                    alert("There was a problem while generating an account. Please try again")
-                }
-                else{
-                    var data = response.split("<>");
-                    
-                    localStorage["username"] = data[0];
-                    localStorage["hash"] = data[1];
-                    localStorage["verified"] = 0;
-                    setTimeout(function(){
-                        location.href = "/main/main.html";
-                    }, 500);
-                }
-            });
+            }
         }
         else{
-            document.getElementById("creating").innerHTML = "Invalid Email Address";
-            document.getElementById("creating").style.display = 'block';
+            alert("Select Country")
         }
     }
     else{
