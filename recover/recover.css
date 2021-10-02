@@ -10,10 +10,11 @@ body{
 #black-rhino{
     position: relative;
     animation: glitch 1s linear infinite;
-    font-size: 4.8em;
+    font-size: 4em;
     letter-spacing: -7px;
-    top: 95px;
+    top: 65px;
     left: 15px;
+    width: 10px;
 }
 
 @keyframes glitch{
@@ -91,7 +92,7 @@ body{
 
 #black-icon {
     position: absolute;
-    top: 100px;
+    top: 70px;
     right: 10px;
     height: 150px;
     width: 150px;
@@ -101,7 +102,7 @@ body{
 
 #username {
     position: relative;
-    top: 80px;
+    top: 40px;
     left: 15px;
     font-size: 1.2em;
     font-weight: 400;
@@ -110,7 +111,7 @@ body{
 
 #username-box {
     position: relative;
-    top: 90px;
+    top: 50px;
     left: 10px;
     width: 330px;
     height: 30px;
@@ -121,7 +122,7 @@ body{
 
 #recovery-hash{
     position: relative;
-    top: 120px;
+    top: 80px;
     left: 15px;
     font-size: 1.2em;
     font-weight: 400;
@@ -130,7 +131,7 @@ body{
 
 #hash {
     position: relative;
-    top: 130px;
+    top: 90px;
     left: 10px;
     width: 330px;
     height: 30px;
@@ -142,7 +143,7 @@ body{
 #confirm-recovery {
     position: relative;
     text-align: center;
-    top: 200px;
+    top: 160px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 180px;
@@ -160,7 +161,7 @@ body{
 #confirm-recovery:hover {
     cursor: pointer;
     color: rgb(255, 255, 255);
-    top: 195px;
+    top: 155px;
     left: 50%;
     transform: translate(-55%, -55%);
     box-shadow: 5px 5px rgb(255, 255, 255);
